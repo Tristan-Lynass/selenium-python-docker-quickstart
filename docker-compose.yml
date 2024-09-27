@@ -1,7 +1,9 @@
-version: '3'
 services:
-  selenium:
+  app:
     build: .
     container_name: custom-selenium-chrome
     volumes:
-      - ./output:/home/seluser/output
+      - ./src:/app/src
+      - ./output:/app/output
+    stdin_open: true
+    tty: true
